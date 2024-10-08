@@ -1,0 +1,25 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    s = input()
+    b = True
+    c1count = 0
+    c0count = 0
+    for ch in s:
+                    if ch == "1":
+                        c1count = c1count+1
+                    if ch == "0":
+                        c0count = c0count +1
+    for a in range(n):
+            if a**2 == n :     
+                    if c1count == 4*(a-1) and c0count == n-(4*(a-1)):
+                            b = False
+                            print("Yes")
+                            break
+                    else :
+                           b = True
+                    
+    if b == True:
+        print("No")
+
+            
